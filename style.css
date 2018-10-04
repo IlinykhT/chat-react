@@ -4,8 +4,8 @@ body {
 
 label {
 	display: block;
-    float: left;
-    width: 80px;
+	float: left;
+	width: 80px;
 	padding-left: 2px;
 	color: teal;
 	font-weight: bold;
@@ -40,7 +40,7 @@ input[type="text"] {
 	margin: 10px;
 	border: solid 1px lightgray;
 	box-sizing: border-box;
-    overflow: auto;
+	overflow: auto;
 }
 
 .sending {

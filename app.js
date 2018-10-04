@@ -7,7 +7,7 @@ class App extends React.Component {
 		const chatHistory = JSON.parse(localStorage.getItem("chat"));
 
 		this.state = {
-		   message: chatHistory
+			message: chatHistory
 		};
         this.sendMessage = this.sendMessage.bind(this);
 	}
@@ -31,23 +31,23 @@ class App extends React.Component {
 }
 
 class MessageList extends React.Component {
-  render() {
-    return (
-		<div className = "chatarea">
-			{this.props.data.map((message, index) => {
-				return (
-					<div key = {index}>
-					   <strong>{message.nick}: </strong>{message.mess}
-					</div> 
-				)})
-			}	
-		</div>
-    )
-  }
+	render() {
+		return (
+			<div className = "chatarea">
+				{this.props.data.map((message, index) => {
+					return (
+						<div key = {index}>
+						   <strong>{message.nick}: </strong>{message.mess}
+						</div> 
+					)})
+				}	
+			</div>
+		)
+	}
 }
 
 function Title() {
-  return <div className="head">Enjoy chatting!</div>
+	return <div className="head">Enjoy chatting!</div>
 }
 
 class SendMessageForm extends React.Component {
@@ -57,7 +57,7 @@ class SendMessageForm extends React.Component {
 			nick: "",
             mess: ""
         }
-        this.handleSubmit = this.handleSubmit.bind(this);
+		this.handleSubmit = this.handleSubmit.bind(this);
 		this.handleChangeNick = this.handleChangeNick.bind(this);
 		this.handleChangeMess = this.handleChangeMess.bind(this);
     }
@@ -71,15 +71,15 @@ class SendMessageForm extends React.Component {
     }
 	
 	handleChangeNick(e) {
-        this.setState({
-            nick: e.target.value
-        })
+		this.setState({
+			nick: e.target.value
+		})
     }
 	
 	handleChangeMess(e) {
-        this.setState({
-            mess: e.target.value
-        })
+		this.setState({
+			mess: e.target.value
+		})
     }
     
     render() {
